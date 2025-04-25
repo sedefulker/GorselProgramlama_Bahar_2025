@@ -1,0 +1,34 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdev2.CreditPage"
+             Title="Kredi Hesaplama">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Picker x:Name="CreditTypePicker" Title="Kredi Türü" />
+
+            <Entry x:Name="CreditAmountEntry" 
+                   Placeholder="Kredi Tutarı (TL)" 
+                   Keyboard="Numeric" />
+
+            <Entry x:Name="InterestRateEntry" 
+                   Placeholder="Faiz Oranı (%)" 
+                   Keyboard="Numeric" />
+
+            <StackLayout>
+                <Label Text="Vade (Ay)" />
+                <Slider x:Name="DurationSlider"
+                        Minimum="1"
+                        Maximum="48"
+                        ValueChanged="OnSliderValueChanged"
+                        MinimumTrackColor="DarkBlue"/>
+                <Label x:Name="DurationLabel" Text="Vade: 1 Ay" />
+            </StackLayout>
+
+            <Button Text="Hesapla" Clicked="OnCalculateClicked" />
+            <Label x:Name="ResultLabel" 
+                   Text="Sonuç burada gösterilecek"
+                   TextColor="DarkGreen"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

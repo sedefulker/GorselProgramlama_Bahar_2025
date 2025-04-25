@@ -1,0 +1,9 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdev2.MainPage">
+    <StackLayout Padding="20"  HorizontalOptions="Center"  VerticalOptions="Center">
+        <Label Text="Sedef ÜLKER" FontSize="24" HorizontalOptions="Center" TextColor="Black" />
+        <Image Source="profile.jpg" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" />
+        <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="18" HorizontalOptions="Center" TextColor="Gray" />
+    </StackLayout>
+</ContentPage>

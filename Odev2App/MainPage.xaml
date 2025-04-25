@@ -1,0 +1,20 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Odev2App.MainPage"
+             Title="Ana Sayfa">
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <Image Source="profil.jpg" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center"/>
+        <Label Text="Ad Soyad: Ahmet Yılmaz"
+               FontSize="24"
+               HorizontalOptions="Center"
+               TextColor="DarkBlue"/>
+        <Button Text="Kredi Hesapla"
+                Clicked="OnKrediPage"
+                />
+        <Button Text="VKİ Hesapla"
+                Clicked="OnVKIPage"
+                />
+        <Button Text="Renk Seçici"
+                Clicked="OnRenkPage"
+                />
+    </VerticalStackLayout>
+</ContentPage>

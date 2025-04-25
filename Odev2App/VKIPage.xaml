@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Odev2App.VKIPage"
+             Title="Vücut Kitle İndeksi">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Kilo (kg):" />
+        <Slider x:Name="kiloSlider" Minimum="30" Maximum="150" ValueChanged="OnKiloBoyChanged"/>
+        <Label x:Name="kiloLabel" Text="70 kg" />
+
+        <Label Text="Boy (cm):" />
+        <Slider x:Name="boySlider" Minimum="100" Maximum="220" ValueChanged="OnKiloBoyChanged"/>
+        <Label x:Name="boyLabel" Text="170 cm" />
+
+        <Label x:Name="vkiLabel" FontSize="20" TextColor="DarkRed"/>
+    </VerticalStackLayout>
+</ContentPage>

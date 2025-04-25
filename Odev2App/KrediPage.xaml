@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Odev2App.KrediPage"
+             Title="Kredi Hesaplama">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Picker x:Name="krediTuruPicker" Title="Kredi Türü">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>İhtiyaç Kredisi</x:String>
+                        <x:String>Taşıt Kredisi</x:String>
+                        <x:String>Konut Kredisi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry x:Name="tutarEntry" Placeholder="Kredi Tutarı" Keyboard="Numeric" />
+            <Entry x:Name="faizEntry" Placeholder="Faiz Oranı (%)" Keyboard="Numeric" />
+
+            <Label Text="Vade (Ay):" />
+            <Slider x:Name="vadeSlider" Minimum="6" Maximum="120" Value="12" ValueChanged="OnVadeChanged" />
+            <Label x:Name="vadeLabel" Text="12 Ay" />
+
+            <Button Text="Hesapla" Clicked="OnHesaplaClicked" />
+            <Label x:Name="sonucLabel" TextColor="Green" FontSize="18"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
